@@ -82,6 +82,6 @@ this an example error which does not explicitly specify which parameter is casui
 
 
 > [!NOTE]
-> This what built for purposes of demo so not all features were fully developed
+> This was built for purposes of demo so not all features and functions are fully developed.
 
 
