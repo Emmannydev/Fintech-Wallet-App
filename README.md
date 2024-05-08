@@ -1,6 +1,6 @@
 ﻿# Simple Wallet Update Service 
 
-A simple service to allow collections from mobile money wallets into your Crypto wallet . I created restful Backend APIs that allows for  independent decoupled services. Any Front - end  can connect to this.
+A simple service to allow collections from mobile money wallets into my Crypto wallet app . I created restful Backend APIs that allows for  decoupled services. Any Front - end  can connect to this.
 
 
 ## Tech Stack 
@@ -14,7 +14,7 @@ A simple service to allow collections from mobile money wallets into your Crypto
 ### Pre -requisites
 * Node.Js
 
-## Instalation
+## Installation
 
 * Clone this Repository.
 git clone https://github.com/Emmannydev/Fintech-Wallet-App.git
@@ -27,7 +27,7 @@ npm run dev
 
 
 
-The application consist of these endpoints .
+The application consists of these endpoints .
 1. makeCollection
 2. getChanneels
 3. cceptCollectionRequest
@@ -35,30 +35,30 @@ The application consist of these endpoints .
 5. getCollectionData
 7. Webhook
 
-1.makeCollections API
-API_URL =http://localhost:8088/api/v1/payment/collections
-Description: This is a POST endpoint allows you to initialize a collection request with Yellowcard. You can use it to transfer funds to a recipient specified in the request parameters.
-
+1. makeCollections API
+API_URL: http://localhost:8088/api/v1/payment/collections
+Description:
+This POST endpoint facilitates the initiation of a collection request. It enables the deduction of funds from a Mobile Money customer as specified in the request parameters.
 2. getChannels API
-The is a GET endpoint getChannel allows user to get all channels in the system.
-API_URL = http://localhost:8088/api/v1/payment/channels
-
-
+API_URL: http://localhost:8088/api/v1/payment/channels
+Description:
+This GET endpoint allows users to retrieve all available channels within the system.
 3. acceptCollectionRequest API
-The acceptCollectionRequest api make use of the id if a created collection to accept a collection. This is make possible by collection the 
-Accept Collection Request api from Yellow card
-API_URL = http://localhost:8088/api/v1/payment/collections/{id}/accept
-
-4.lookedUpCollectionBySequenceId API make use of sequenceId from a collection to look for a specific collection. This API connect to  to Lookup Collection by sequenceId from yellow card.
-API_URL = http://localhost:8088/api/v1/payment/collections/sequence-id/{id}
-
+API_URL: http://localhost:8088/api/v1/payment/collections/{id}/accept
+Description:
+The acceptCollectionRequest API utilizes the ID of a created collection to accept a collection. This functionality is made possible by utilizing the Accept Collection Request API from Yellow Card.
+4. lookedUpCollectionBySequenceId API
+API_URL: http://localhost:8088/api/v1/payment/collections/sequence-id/{id}
+Description:
+The lookedUpCollectionBySequenceId API utilizes the sequence ID from a collection to search for a specific collection. This API establishes a connection to the Lookup Collection by sequence ID from Yellow Card.
 5. getCollectionsData API
-This is a GET endpoint service that allows you to filter the right active channel and network parameters.
-API_URL = http://localhost:8088/api/v1/payment/collections/data
-
+API_URL: http://localhost:8088/api/v1/payment/collections/data
+Description:
+This GET endpoint service enables filtering of the appropriate active channel and network parameters.
 6. createWebhook API
-This a GET endpoint service that allows you to create webhooks with the right events on Yellow Card API service.
-API_URL = http://localhost:8088/api/v1/payment/webhooks
+API_URL: http://localhost:8088/api/v1/payment/webhooks
+Description:
+This GET endpoint service allows the creation of webhooks with the appropriate events on the Yellow Card API service.
 
 ## Challenges
 > [!Some Challenges encountered in bulding the wallet service with the API docs]
