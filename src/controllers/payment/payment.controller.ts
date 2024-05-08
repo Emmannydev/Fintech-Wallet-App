@@ -28,6 +28,32 @@ class PaymentController {
 
   };
 
+  createWebhook = async (req:Request,res:Response) => {
+    const webhookAuth = httpAuth('/business/webhooks', 'POST', req.body
+  );
+
+  console.log("the webhoot auth",webhookAuth)
+    
+  const optionsWebhook = {
+    method: "POST",
+    url: "https://sandbox.api.yellowcard.io/business/webhooks",
+    headers: { ...webhookAuth, accept: "application/json" },
+    data:req.body
+  };
+
+try {
+  const webhooksRes = await axios.request(optionsWebhook)
+  console.log("the response forvhook",webhooksRes.data)
+  res.status(200).send(webhooksRes.data)
+} 
+catch (error) {
+  console.log("webhook error",error)
+}
+  
+
+
+  }
+
   getCollectionsData =async (req:Request,res:Response)=>{
 
     const channelsAuth = httpAuth('/business/channels', 'GET', false);
@@ -53,7 +79,7 @@ class PaymentController {
 
     let {channels, networks} = {...networkData.data, ...channelData.data} as any
 
-    let activeChannels = channels.filter((c:any) => c.status === 'active')
+    let activeChannels = channels.filter((c:any) => c.status === 'active' )
   // let supportedCountries = [...new Set(activeChannels.map(c => c.country))]
 
   // Select channel
