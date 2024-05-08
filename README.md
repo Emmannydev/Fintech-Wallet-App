@@ -1,10 +1,10 @@
-﻿# Simple Wallet Update Service 
+﻿## Simple Wallet Update Service 
 
 A simple service to allow collections from mobile money wallets into my Crypto wallet app . I created restful Backend APIs that allows for  decoupled services. Any Front - end  can connect to this.
 
 
 ## Tech Stack 
- ### Frameworks, Tools & Languages
+ #### Frameworks, Tools & Languages
 
 * Backend - Node (Express Js)
 * Language - Typescript
@@ -19,10 +19,10 @@ A simple service to allow collections from mobile money wallets into my Crypto w
 * Clone this Repository.
 git clone https://github.com/Emmannydev/Fintech-Wallet-App.git
 
-* Install Dependencies
+* Install Dependencies ~
 npm install
 
-* Run App
+* Run App ~
 npm run dev
 
 
@@ -45,7 +45,8 @@ This POST endpoint facilitates the initiation of a collection request. It enable
 API_URL: http://localhost:8088/api/v1/payment/channels
 Description:
 This GET endpoint allows users to retrieve all available channels within the system.
-  * acceptCollectionRequest API
+
+* acceptCollectionRequest API
 API_URL: http://localhost:8088/api/v1/payment/collections/{id}/accept
 Description:
 The acceptCollectionRequest API utilizes the ID of a created collection to accept a collection. This functionality is made possible by utilizing the Accept Collection Request API from Yellow Card.
@@ -57,7 +58,7 @@ The lookedUpCollectionBySequenceId API utilizes the sequence ID from a collectio
 API_URL: http://localhost:8088/api/v1/payment/collections/data
 Description:
 This GET endpoint service enables filtering of the appropriate active channel and network parameters.
-  * createWebhook API
+ * createWebhook API
 API_URL: http://localhost:8088/api/v1/payment/webhooks
 Description:
 This GET endpoint service allows the creation of webhooks with the appropriate events on the Yellow Card API service.
