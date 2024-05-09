@@ -39,38 +39,37 @@ The application consists of these endpoints .
 
 * makeCollections API
 API_URL: http://localhost:8088/api/v1/payment/collections
-
-Description:
-This POST endpoint facilitates the initiation of a collection request. It enables the deduction of funds from a Mobile Money customer as specified in the request parameters.
+ * Description:
+ This POST endpoint facilitates the initiation of a collection request. It enables the deduction of funds from a Mobile Money customer as specified in the request parameters.
 * getChannels API
 API_URL: http://localhost:8088/api/v1/payment/channels
-
-Description:
-This GET endpoint allows users to retrieve all available channels within the system.
+ * Description:
+ This GET endpoint allows users to retrieve all available channels within the system.
 
 * acceptCollectionRequest API
 API_URL: http://localhost:8088/api/v1/payment/collections/{id}/accept
-Description:
-The acceptCollectionRequest API utilizes the ID of a created collection to accept a collection. This functionality is made possible by utilizing the Accept Collection Request API from Yellow Card.
+  * Description:
+ The acceptCollectionRequest API utilizes the ID of a created collection to accept a collection. This functionality is made possible by utilizing the Accept Collection Request API from 
+ Yellow Card.
 * lookedUpCollectionBySequenceId API
 API_URL: http://localhost:8088/api/v1/payment/collections/sequence-id/{id}
-
-Description:
-The lookedUpCollectionBySequenceId API utilizes the sequence ID from a collection to search for a specific collection. This API establishes a connection to the Lookup Collection by sequence ID from Yellow Card.
+  * Description:
+   The lookedUpCollectionBySequenceId API utilizes the sequence ID from a collection to search for a specific collection. This API establishes a connection to the Lookup Collection by 
+   sequence ID from Yellow Card.
 * getCollectionsData API
 API_URL: http://localhost:8088/api/v1/payment/collections/data
-Description:
-This GET endpoint service enables filtering of the appropriate active channel and network parameters.
+  * Description:
+ This GET endpoint service enables filtering of the appropriate active channel and network parameters.
  * createWebhook API
 API_URL: http://localhost:8088/api/v1/payment/webhooks
-Description:
-This GET endpoint service allows the creation of webhooks with the appropriate events on the Yellow Card API service.
+   * Description:
+   This GET endpoint service allows the creation of webhooks with the appropriate events on the Yellow Card API service.
 
 ### Challenges faced in buliding with external YC payment APIs
 
  
 
- * Some error messages returned for bad requests lack specificity, hindering efficient troubleshooting.
+ * Some error messages returned for bad requests lacked a bit of specificity, hindering efficient troubleshooting.
     * For instance, an error message like { message: '[instance failed to match exactly one schema (matched 0 out of 2)]', code: 'InvalidRequestBody' }
       provides insufficient detail, posing challenges for developers in diagnosing issues promptly.
 
