@@ -30,7 +30,7 @@ npm run dev
 The application consists of these endpoints .
 1. makeCollection
 2. getChanneels
-3. cceptCollectionRequest
+3. AcceptCollectionRequest
 4. lookedUpCollectionBySequenceId
 5. getCollectionData
 7. Webhook
@@ -66,25 +66,29 @@ API_URL: http://localhost:8088/api/v1/payment/webhooks
 Description:
 This GET endpoint service allows the creation of webhooks with the appropriate events on the Yellow Card API service.
 
-## Challenges
+### Challenges faced in buliding with external YC payment APIs
 
  
 
- * Error message returned  for bad request errors sometimes do not detail the exact reason for the error . 
-    e.g {
-  message: '[instance failed to match exactly one schema (matched 0 out of 2)]',
-  code: 'InvalidRequestBody'
-}
+ * Some error messages returned for bad requests lack specificity, hindering efficient troubleshooting.
+    * For instance, an error message like { message: '[instance failed to match exactly one schema (matched 0 out of 2)]', code: 'InvalidRequestBody' }
+      provides insufficient detail, posing challenges for developers in diagnosing issues promptly.
 
-this an example error which does not explicitly specify which parameter is casuing bad request 
 
- * Signature combination for Authorization was cumbersome for POST and PUT method endpoints.
+ * The signature combination required for Authorization, particularly for POST and PUT method endpoints, is cumbersome.
   
-  Suggestion : A sample for POST and PUT methods
+   * Suggestion : Simplifying the explanation and implementation of authentication for these methods would enhance efficiency and ease of integration.
+  
+ * Generating Auth signature combinations online often results in numerous errors, impeding direct testing of endpoints without scripting.
 
- * Unable to get final or complete status even with sandbox data. Rather received "Process" after commiting transactions. 
+   * Suggestion : Providing an illustrative flow for generating authorization through online tools, without scripting, would expedite API testing for partners.
 
- * Webhook guide  in API doc described a  X-YC-signature header which I could not clearly identify.
+ * Despite utilizing sandbox data, obtaining a final or complete status proves challenging, as transactions consistently return a "Process" status after commiting transactions.
+    * Suggestion : Enhancing documentation or clarifying expected outcomes would aid devs in effectively utilizing sandbox environments.
+
+ * The API documentation includes a Webhook guide mentioning an X-YC-signature header, which lacks clear identification.
+   * Suggestion : Enhancing the documentation with detailed explanations or examples would assist devs in correctly implementing and utilizing webhooks.
+
 
 
 > [!NOTE]
