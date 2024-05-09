@@ -16,7 +16,7 @@ A simple service to allow collections from mobile money wallets into my Crypto w
 
 ## Installation
 
-* Clone this Repository.
+* Clone this Repository ~
 git clone https://github.com/Emmannydev/Fintech-Wallet-App.git
 
 * Install Dependencies ~
@@ -29,9 +29,9 @@ npm run dev
 
 The application consists of these endpoints .
 1. makeCollection
-2. getChanneels
+2. getChannels
 3. AcceptCollectionRequest
-4. lookedUpCollectionBySequenceId
+4. lookUpCollectionBySequenceId
 5. getCollectionData
 7. Webhook
 
@@ -89,7 +89,7 @@ API_URL: http://localhost:8088/api/v1/payment/webhooks
  * The API documentation includes a Webhook guide mentioning an X-YC-signature header, which lacks clear identification.
    * Suggestion : Enhancing the documentation with detailed explanations or examples would assist devs in correctly implementing and utilizing webhooks.
   
- * Due to time constraint for submission could not develop Authorization aspects of API .
+ * Due to time constraint for submission could not develop Authorization features of my API .
 
 
 
