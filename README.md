@@ -65,7 +65,8 @@ API_URL: http://localhost:8088/api/v1/payment/webhooks
    * Description:
    This GET endpoint service allows the creation of webhooks with the appropriate events on the Yellow Card API service.
 
-### Challenges faced in buliding with external YC payment APIs
+
+## Challenges faced in buliding with external YC payment APIs
 
  
 
@@ -87,10 +88,12 @@ API_URL: http://localhost:8088/api/v1/payment/webhooks
 
  * The API documentation includes a Webhook guide mentioning an X-YC-signature header, which lacks clear identification.
    * Suggestion : Enhancing the documentation with detailed explanations or examples would assist devs in correctly implementing and utilizing webhooks.
+  
+ * Due to time constraint for submission could not develop Authorization aspects of API .
 
 
 
 > [!NOTE]
-> This was built for purposes of demo so not all features and functions are fully developed.
+> This was built for purposes of demo so not all features and functions are fully developed For eamxmple Auth for API and disbursement aspects 
 
 
