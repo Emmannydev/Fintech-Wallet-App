@@ -39,11 +39,11 @@ The application consists of these endpoints .
 
 * makeCollections API
 API_URL: http://localhost:8088/api/v1/payment/collections
- * Description:
+  * Description:
  This POST endpoint facilitates the initiation of a collection request. It enables the deduction of funds from a Mobile Money customer as specified in the request parameters.
 * getChannels API
 API_URL: http://localhost:8088/api/v1/payment/channels
- * Description:
+  * Description:
  This GET endpoint allows users to retrieve all available channels within the system.
 
 * acceptCollectionRequest API
